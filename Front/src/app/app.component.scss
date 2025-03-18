@@ -1,0 +1,138 @@
+// Variables de color
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$table-bg: #f8f9fa;
+$card-bg: #ffffff;
+$card-shadow: rgba(0, 0, 0, 0.1);
+$border-radius: 8px;
+
+// Contenedor
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+// Botón de agregar usuario
+.btn-add {
+  background-color: $success-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($success-color, 10%);
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
+
+// Card de crear usuario
+.create-user-card {
+  background-color: $card-bg;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px $card-shadow;
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .form-group {
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      border-radius: $border-radius;
+      border: 1px solid #ddd;
+      padding: 10px;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+
+    &.btn-primary {
+      background-color: $primary-color;
+      border: none;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    &.btn-secondary {
+      background-color: $secondary-color;
+      border: none;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+// Tabla de usuarios
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th {
+    background-color: $primary-color;
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+
+  td {
+    background-color: $table-bg;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-warning {
+    background-color: #ffc107;
+    color: white;
+
+    &:hover {
+      background-color: darken(#ffc107, 10%);
+    }
+  }
+
+  .btn-danger {
+    background-color: $danger-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+}
